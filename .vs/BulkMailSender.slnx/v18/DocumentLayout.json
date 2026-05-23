@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\BulkMailSender\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\viewmodels\\emailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\viewmodels\\emailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\models\\emailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{270C59FC-2E13-47DB-A768-4DB1EF75CE50}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\models\\emailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\.gitignore",
+              "RelativeDocumentMoniker": "BulkMailSender\\.gitignore",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\.gitignore",
+              "RelativeToolTip": "BulkMailSender\\.gitignore",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-23T07:23:52.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "BulkMailSender\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "BulkMailSender\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-23T07:18:09.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Program.cs",
+              "RelativeDocumentMoniker": "BulkMailSender\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Program.cs",
+              "RelativeToolTip": "BulkMailSender\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:10:20.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BulkMailSender\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BulkMailSender\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-23T07:10:31.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\ViewModels\\EmailViewModel.cs",
+              "RelativeDocumentMoniker": "BulkMailSender\\ViewModels\\EmailViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\ViewModels\\EmailViewModel.cs",
+              "RelativeToolTip": "BulkMailSender\\ViewModels\\EmailViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T06:59:52.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BulkMailSender\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BulkMailSender\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T06:35:01.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmailModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Models\\EmailModel.cs",
+              "RelativeDocumentMoniker": "BulkMailSender\\Models\\EmailModel.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Models\\EmailModel.cs",
+              "RelativeToolTip": "BulkMailSender\\Models\\EmailModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T06:34:17.009Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

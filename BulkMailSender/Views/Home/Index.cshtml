@@ -1,0 +1,36 @@
+﻿@model BulkMailSender.ViewModels.EmailViewModel
+
+<div class="container mt-5">
+
+    <h2>Bulk Email Sender</h2>
+
+    <form asp-controller="Home" asp-action="Send" method="post" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label>Emails</label>
+            <textarea asp-for="Emails" class="form-control" rows="5"
+                      placeholder="Enter emails separated by commas"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Subject</label>
+            <input asp-for="Subject" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label>Body</label>
+            <textarea asp-for="Body" class="form-control" rows="6"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Attachment</label>
+            <input asp-for="Attachment" type="file" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Send Emails
+        </button>
+
+    </form>
+
+</div>
