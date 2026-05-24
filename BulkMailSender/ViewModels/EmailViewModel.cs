@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BulkMailSender.Models;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
+
 namespace BulkMailSender.ViewModels
 {
     public class EmailViewModel
@@ -11,5 +13,8 @@ namespace BulkMailSender.ViewModels
         [Required] 
         public string Body { get; set; }
         public IFormFile Attachment { get; set; }
+        public int SelectedTemplateId { get; set; }
+        public List<EmailTemplate>? Templates { get; set; }
+
     }
 }

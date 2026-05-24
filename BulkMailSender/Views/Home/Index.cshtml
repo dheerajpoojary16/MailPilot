@@ -1,36 +1,171 @@
 ﻿@model BulkMailSender.ViewModels.EmailViewModel
 
-<div class="container mt-5">
+<div class="container">
 
-    <h2>Bulk Email Sender</h2>
+    <div class="main-card">
 
-    <form asp-controller="Home" asp-action="Send" method="post" enctype="multipart/form-data">
+        <h1 class="page-title">
+            Bulk Email Sender
+        </h1>
 
-        <div class="mb-3">
-            <label>Emails</label>
-            <textarea asp-for="Emails" class="form-control" rows="5"
-                      placeholder="Enter emails separated by commas"></textarea>
-        </div>
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-info">
+                @ViewBag.Message
+            </div>
+        }
 
-        <div class="mb-3">
-            <label>Subject</label>
-            <input asp-for="Subject" class="form-control" />
-        </div>
+        <form asp-controller="Home"
+              asp-action="Send"
+              method="post"
+              enctype="multipart/form-data">
 
-        <div class="mb-3">
-            <label>Body</label>
-            <textarea asp-for="Body" class="form-control" rows="6"></textarea>
-        </div>
+            <!-- TEMPLATE -->
 
-        <div class="mb-3">
-            <label>Attachment</label>
-            <input asp-for="Attachment" type="file" class="form-control" />
-        </div>
+            <div class="mb-4">
 
-        <button type="submit" class="btn btn-primary">
-            Send Emails
-        </button>
+                <label class="form-label">
+                    Select Template
+                </label>
 
-    </form>
+                <select asp-for="SelectedTemplateId"
+                        id="templateDropdown"
+                        class="form-control">
+
+                    <option value="">
+                        -- Select Template --
+                    </option>
+
+                    @foreach (var item in Model.Templates)
+                    {
+                        <option value="@item.Id">
+                            @item.TemplateName
+                        </option>
+                    }
+
+                </select>
+
+            </div>
+
+            <!-- EMAILS -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Emails
+                </label>
+
+                <textarea asp-for="Emails"
+                          class="form-control"
+                          rows="5"
+                          placeholder="Enter emails separated by commas"></textarea>
+
+            </div>
+
+            <!-- SUBJECT -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Subject
+                </label>
+
+                <input asp-for="Subject"
+                       id="subjectBox"
+                       class="form-control" />
+
+            </div>
+
+            <!-- BODY -->
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Body
+                </label>
+
+                <textarea asp-for="Body"
+                          id="bodyBox"
+                          class="form-control"
+                          rows="8"></textarea>
+
+            </div>
+
+            <!-- ATTACHMENT -->
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Attachment
+                </label>
+
+                <input asp-for="Attachment"
+                       type="file"
+                       class="form-control" />
+
+            </div>
+
+            <!-- TEMPLATE FILE NAME -->
+
+            <div class="template-info"
+                 id="attachmentName"
+                 style="display:none;">
+            </div>
+
+            <!-- HIDDEN ATTACHMENT -->
+
+            <input type="hidden"
+                   id="hiddenAttachment"
+                   name="TemplateAttachment" />
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="send-btn">
+
+                Send Emails
+
+            </button>
+
+        </form>
+
+    </div>
 
 </div>
+
+<script>
+
+    document
+    .getElementById("templateDropdown")
+    .addEventListener("change", function () {
+
+        let templateId = this.value;
+
+        fetch('/Home/GetTemplate?id=' + templateId)
+
+            .then(response => response.json())
+
+            .then(data => {
+                    
+
+                document
+                    .getElementById("subjectBox")
+                    .value = data.sub;
+
+                document
+                    .getElementById("bodyBox")
+                    .value = data.body;
+
+                    document
+                        .getElementById("hiddenAttachment")
+                        .value = data.attachment;
+                    document
+                        .getElementById("attachmentName")
+                        .innerText =
+                        "Template Attachment: " +
+                        data.attachment.split('/').pop();
+            });
+
+    });
+
+</script>
