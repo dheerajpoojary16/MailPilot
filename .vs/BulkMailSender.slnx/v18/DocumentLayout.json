@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\BulkMailSender\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -47,6 +51,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Dockerfile",
+              "RelativeDocumentMoniker": "BulkMailSender\\Dockerfile",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Dockerfile",
+              "RelativeToolTip": "BulkMailSender\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-24T16:34:54.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\appsettings.json",
               "RelativeDocumentMoniker": "BulkMailSender\\appsettings.json",
@@ -59,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "custom.css",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\wwwroot\\css\\custom.css",
               "RelativeDocumentMoniker": "BulkMailSender\\wwwroot\\css\\custom.css",
@@ -67,12 +84,11 @@
               "RelativeToolTip": "BulkMailSender\\wwwroot\\css\\custom.css",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAAFsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-24T12:53:03.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T12:53:03.852Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "BulkMailSender\\Views\\Shared\\_Layout.cshtml",
@@ -84,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "EmailTemplate.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Models\\EmailTemplate.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\Models\\EmailTemplate.cs",
@@ -96,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "BulkMailSender\\Views\\Home\\Index.cshtml",
@@ -108,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "EmailViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\ViewModels\\EmailViewModel.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\ViewModels\\EmailViewModel.cs",
@@ -120,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\Controllers\\HomeController.cs",
@@ -132,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EmailModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Models\\EmailModel.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\Models\\EmailModel.cs",
