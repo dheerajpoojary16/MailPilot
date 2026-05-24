@@ -3,6 +3,21 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\BulkMailSender\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +28,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\models\\emailtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\models\\emailtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|solutionrelative:bulkmailsender\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76528C6A-A0A1-0ECA-AE37-2A0C3CFC2B3B}|BulkMailSender\\BulkMailSender.csproj|c:\\users\\user\\source\\repos\\bulkmailsender\\bulkmailsender\\viewmodels\\emailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +41,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAAEVAAAAAAAAAAAmwBUVAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-05-24T14:07:39.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "custom.css",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\wwwroot\\css\\custom.css",
+              "RelativeDocumentMoniker": "BulkMailSender\\wwwroot\\css\\custom.css",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\wwwroot\\css\\custom.css",
+              "RelativeToolTip": "BulkMailSender\\wwwroot\\css\\custom.css",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-24T12:53:03.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BulkMailSender\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BulkMailSender\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T12:51:27.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "EmailTemplate.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Models\\EmailTemplate.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\Models\\EmailTemplate.cs",
@@ -42,8 +91,7 @@
               "RelativeToolTip": "BulkMailSender\\Models\\EmailTemplate.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAIA6wAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T11:08:17.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T11:08:17.455Z"
             },
             {
               "$type": "Document",
@@ -53,14 +101,13 @@
               "RelativeDocumentMoniker": "BulkMailSender\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "BulkMailSender\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-23T07:10:31.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T07:10:31.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "EmailViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\ViewModels\\EmailViewModel.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\ViewModels\\EmailViewModel.cs",
@@ -68,25 +115,23 @@
               "RelativeToolTip": "BulkMailSender\\ViewModels\\EmailViewModel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T06:59:52.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T06:59:52.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Controllers\\HomeController.cs",
               "RelativeToolTip": "BulkMailSender\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA3wFwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAA3wGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T06:35:01.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T06:35:01.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "EmailModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\Models\\EmailModel.cs",
               "RelativeDocumentMoniker": "BulkMailSender\\Models\\EmailModel.cs",
@@ -94,8 +139,7 @@
               "RelativeToolTip": "BulkMailSender\\Models\\EmailModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T06:34:17.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T06:34:17.009Z"
             }
           ]
         }

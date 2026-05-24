@@ -1,171 +1,198 @@
-﻿@model BulkMailSender.ViewModels.EmailViewModel
+@model BulkMailSender.ViewModels.EmailViewModel
 
-<div class="container">
+<div class="row g-4 fade-in">
+    <!-- Left Column: Main Form -->
+    <div class="col-lg-8">
+        <div class="main-card premium-card">
+            <h2 class="page-title mb-1">Bulk Email Sender</h2>
+            <p class="text-muted mb-4">Compose and send emails to your audience efficiently.</p>
 
-    <div class="main-card">
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success d-flex align-items-center mb-4">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    <div>@ViewBag.Message</div>
+                </div>
+            }
 
-        <h1 class="page-title">
-            Bulk Email Sender
-        </h1>
+            <form asp-controller="Home" asp-action="Send" method="post" enctype="multipart/form-data">
+                
+                <!-- TEMPLATE -->
+                <div class="mb-4">
+                    <label class="form-label">Select Template</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-file-earmark-text"></i></span>
+                        <select asp-for="SelectedTemplateId" id="templateDropdown" class="form-control border-start-0 ps-0">
+                            <option value="">-- Select Template --</option>
+                            @foreach (var item in Model.Templates)
+                            {
+                                <option value="@item.Id">@item.TemplateName</option>
+                            }
+                        </select>
+                    </div>
+                </div>
 
-        @if (ViewBag.Message != null)
-        {
-            <div class="alert alert-info">
-                @ViewBag.Message
-            </div>
-        }
+                <!-- EMAILS -->
+                <div class="mb-4">
+                    <label class="form-label d-flex justify-content-between">
+                        <span>Emails</span>
+                        <small class="text-muted" id="emailCountDisplay">0 recipients</small>
+                    </label>
+                    <textarea asp-for="Emails" id="emailsBox" class="form-control premium-textarea" rows="4" placeholder="Enter emails separated by commas"></textarea>
+                </div>
 
-        <form asp-controller="Home"
-              asp-action="Send"
-              method="post"
-              enctype="multipart/form-data">
+                <!-- SUBJECT -->
+                <div class="mb-4">
+                    <label class="form-label">Subject</label>
+                    <input asp-for="Subject" id="subjectBox" class="form-control premium-input" placeholder="Enter email subject" />
+                </div>
 
-            <!-- TEMPLATE -->
+                <!-- BODY -->
+                <div class="mb-4">
+                    <label class="form-label">Body</label>
+                    <textarea asp-for="Body" id="bodyBox" class="form-control premium-textarea" rows="10" placeholder="Write your email body here..."></textarea>
+                </div>
 
-            <div class="mb-4">
+                <!-- ATTACHMENT -->
+                <div class="mb-4">
+                    <label class="form-label">Attachment</label>
+                    <input asp-for="Attachment" id="attachmentBox" type="file" class="form-control premium-input" />
+                </div>
 
-                <label class="form-label">
-                    Select Template
-                </label>
+                <!-- TEMPLATE FILE NAME -->
+                <div class="template-info d-flex align-items-center gap-2 mb-4" id="attachmentName" style="display:none !important;">
+                    <i class="bi bi-paperclip"></i>
+                    <span id="attachmentNameText"></span>
+                </div>
 
-                <select asp-for="SelectedTemplateId"
-                        id="templateDropdown"
-                        class="form-control">
+                <!-- HIDDEN ATTACHMENT -->
+                <input type="hidden" id="hiddenAttachment" name="TemplateAttachment" />
 
-                    <option value="">
-                        -- Select Template --
-                    </option>
-
-                    @foreach (var item in Model.Templates)
-                    {
-                        <option value="@item.Id">
-                            @item.TemplateName
-                        </option>
-                    }
-
-                </select>
-
-            </div>
-
-            <!-- EMAILS -->
-
-            <div class="mb-4">
-
-                <label class="form-label">
-                    Emails
-                </label>
-
-                <textarea asp-for="Emails"
-                          class="form-control"
-                          rows="5"
-                          placeholder="Enter emails separated by commas"></textarea>
-
-            </div>
-
-            <!-- SUBJECT -->
-
-            <div class="mb-4">
-
-                <label class="form-label">
-                    Subject
-                </label>
-
-                <input asp-for="Subject"
-                       id="subjectBox"
-                       class="form-control" />
-
-            </div>
-
-            <!-- BODY -->
-
-            <div class="mb-4">
-
-                <label class="form-label">
-                    Body
-                </label>
-
-                <textarea asp-for="Body"
-                          id="bodyBox"
-                          class="form-control"
-                          rows="8"></textarea>
-
-            </div>
-
-            <!-- ATTACHMENT -->
-
-            <div class="mb-3">
-
-                <label class="form-label">
-                    Attachment
-                </label>
-
-                <input asp-for="Attachment"
-                       type="file"
-                       class="form-control" />
-
-            </div>
-
-            <!-- TEMPLATE FILE NAME -->
-
-            <div class="template-info"
-                 id="attachmentName"
-                 style="display:none;">
-            </div>
-
-            <!-- HIDDEN ATTACHMENT -->
-
-            <input type="hidden"
-                   id="hiddenAttachment"
-                   name="TemplateAttachment" />
-
-            <!-- BUTTON -->
-
-            <button type="submit"
-                    class="send-btn">
-
-                Send Emails
-
-            </button>
-
-        </form>
-
+                <!-- BUTTON -->
+                <div class="d-flex justify-content-end mt-2">
+                    <button type="submit" class="send-btn d-flex align-items-center gap-2">
+                        <i class="bi bi-send-fill"></i> Send Emails
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <!-- Right Column: Live Preview -->
+    <div class="col-lg-4">
+        <div class="preview-panel sticky-top" style="top: 24px;">
+            <div class="preview-header d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                <h6 class="m-0 fw-bold d-flex align-items-center gap-2"><i class="bi bi-eye"></i> Live Preview</h6>
+                <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2">Live</span>
+            </div>
+            
+            <div class="preview-content">
+                <div class="preview-field mb-3 border-bottom pb-3">
+                    <small class="text-muted text-uppercase fw-bold" style="font-size: 0.75rem;">To</small>
+                    <div class="mt-1 fs-6 text-dark" id="previewRecipients">No recipients added</div>
+                </div>
+
+                <div class="preview-field mb-3 border-bottom pb-3">
+                    <small class="text-muted text-uppercase fw-bold" style="font-size: 0.75rem;">Subject</small>
+                    <div class="mt-1 fs-5 fw-bold text-dark" id="previewSubject">New Email</div>
+                </div>
+
+                <div class="preview-field mb-3">
+                    <small class="text-muted text-uppercase fw-bold" style="font-size: 0.75rem;">Message</small>
+                    <div class="mt-2 preview-body-box bg-light rounded p-3 text-dark" style="min-height: 200px; white-space: pre-wrap;" id="previewBody">Your email body will appear here...</div>
+                </div>
+
+                <div class="preview-attachment-box mt-3 p-3 rounded bg-light border d-none align-items-center gap-2" id="previewAttachmentContainer">
+                    <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                    <span id="previewAttachmentText" class="fw-medium text-truncate"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
+    // Live Preview Logic
+    const emailsBox = document.getElementById("emailsBox");
+    const subjectBox = document.getElementById("subjectBox");
+    const bodyBox = document.getElementById("bodyBox");
+    const attachmentBox = document.getElementById("attachmentBox");
 
-    document
-    .getElementById("templateDropdown")
-    .addEventListener("change", function () {
+    const emailCountDisplay = document.getElementById("emailCountDisplay");
+    const previewRecipients = document.getElementById("previewRecipients");
+    const previewSubject = document.getElementById("previewSubject");
+    const previewBody = document.getElementById("previewBody");
+    const previewAttachmentContainer = document.getElementById("previewAttachmentContainer");
+    const previewAttachmentText = document.getElementById("previewAttachmentText");
 
-        let templateId = this.value;
+    function updatePreview() {
+        // Update Emails
+        const emails = emailsBox.value.split(',').map(e => e.trim()).filter(e => e.length > 0);
+        const count = emails.length;
+        emailCountDisplay.innerText = count === 1 ? '1 recipient' : `${count} recipients`;
+        
+        if (count > 0) {
+            previewRecipients.innerHTML = `<span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill">${count} recipient(s)</span>`;
+        } else {
+            previewRecipients.innerHTML = 'No recipients added';
+        }
 
-        fetch('/Home/GetTemplate?id=' + templateId)
+        // Update Subject
+        previewSubject.innerText = subjectBox.value || 'New Email';
 
-            .then(response => response.json())
+        // Update Body
+        previewBody.innerText = bodyBox.value || 'Your email body will appear here...';
+    }
 
-            .then(data => {
-                    
+    emailsBox.addEventListener("input", updatePreview);
+    subjectBox.addEventListener("input", updatePreview);
+    bodyBox.addEventListener("input", updatePreview);
 
-                document
-                    .getElementById("subjectBox")
-                    .value = data.sub;
-
-                document
-                    .getElementById("bodyBox")
-                    .value = data.body;
-
-                    document
-                        .getElementById("hiddenAttachment")
-                        .value = data.attachment;
-                    document
-                        .getElementById("attachmentName")
-                        .innerText =
-                        "Template Attachment: " +
-                        data.attachment.split('/').pop();
-            });
-
+    // Attachment Box Change
+    attachmentBox.addEventListener("change", function() {
+        if (this.files && this.files.length > 0) {
+            previewAttachmentContainer.classList.remove("d-none");
+            previewAttachmentContainer.classList.add("d-flex");
+            previewAttachmentText.innerText = this.files[0].name;
+        } else {
+            previewAttachmentContainer.classList.add("d-none");
+            previewAttachmentContainer.classList.remove("d-flex");
+        }
     });
 
+    // Template Logic
+    document.getElementById("templateDropdown").addEventListener("change", function () {
+        let templateId = this.value;
+        
+        if (!templateId) return;
+
+        fetch('/Home/GetTemplate?id=' + templateId)
+            .then(response => response.json())
+            .then(data => {
+                subjectBox.value = data.sub;
+                bodyBox.value = data.body;
+                document.getElementById("hiddenAttachment").value = data.attachment;
+                
+                const attachmentNameEl = document.getElementById("attachmentName");
+                const attachmentNameText = document.getElementById("attachmentNameText");
+                
+                if (data.attachment) {
+                    attachmentNameEl.style.setProperty("display", "flex", "important");
+                    const fileName = data.attachment.split('/').pop();
+                    attachmentNameText.innerText = "Template Attachment: " + fileName;
+                    
+                    previewAttachmentContainer.classList.remove("d-none");
+                    previewAttachmentContainer.classList.add("d-flex");
+                    previewAttachmentText.innerText = fileName;
+                } else {
+                    attachmentNameEl.style.setProperty("display", "none", "important");
+                }
+                
+                // Trigger preview update
+                updatePreview();
+            });
+    });
+
+    // Initial update on load
+    updatePreview();
 </script>
