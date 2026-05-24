@@ -2,9 +2,9 @@
 
 <div class="row g-4 fade-in">
     <!-- Left Column: Main Form -->
-    <div class="col-lg-8">
+    <div class="col-lg-7">
         <div class="main-card premium-card">
-            <h2 class="page-title mb-1">Bulk Email Sender</h2>
+            <h2 class="page-title mb-1">MailPilot</h2>
             <p class="text-muted mb-4">Compose and send emails to your audience efficiently.</p>
 
             @if (ViewBag.Message != null)
@@ -15,7 +15,7 @@
                 </div>
             }
 
-            <form asp-controller="Home" asp-action="Send" method="post" enctype="multipart/form-data">
+            <form id="emailForm" asp-controller="Home" asp-action="Send" method="post" enctype="multipart/form-data">
                 
                 <!-- TEMPLATE -->
                 <div class="mb-4">
@@ -79,7 +79,7 @@
     </div>
 
     <!-- Right Column: Live Preview -->
-    <div class="col-lg-4">
+    <div class="col-lg-5">
         <div class="preview-panel sticky-top" style="top: 24px;">
             <div class="preview-header d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
                 <h6 class="m-0 fw-bold d-flex align-items-center gap-2"><i class="bi bi-eye"></i> Live Preview</h6>
@@ -195,4 +195,56 @@
 
     // Initial update on load
     updatePreview();
+
+    // AJAX Form Submission
+    document.getElementById("emailForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        const btn = document.querySelector(".send-btn");
+        const originalContent = btn.innerHTML;
+        
+        // Show spinner
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Sending...';
+        btn.disabled = true;
+
+        const formData = new FormData(this);
+
+        fetch(this.action, {
+            method: this.method,
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            btn.innerHTML = originalContent;
+            btn.disabled = false;
+
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: data.message,
+                    confirmButtonColor: '#2563eb',
+                    timer: 3000,
+                    timerProgressBar: true
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Failed to Send',
+                    text: data.message || 'An unknown error occurred.',
+                    confirmButtonColor: '#2563eb'
+                });
+            }
+        })
+        .catch(error => {
+            btn.innerHTML = originalContent;
+            btn.disabled = false;
+            Swal.fire({
+                icon: 'error',
+                title: 'Network Error',
+                text: 'Something went wrong communicating with the server.',
+                confirmButtonColor: '#2563eb'
+            });
+        });
+    });
 </script>

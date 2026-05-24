@@ -7,6 +7,7 @@ using BulkMailSender.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using Microsoft.Extensions.Configuration;
+using System.Linq;
 
 namespace BulkMailSender.Controllers
 {
@@ -51,7 +52,11 @@ namespace BulkMailSender.Controllers
         {
             try
             {
-                string[] emailList = model.Emails.Split(',');
+                var emailList = model.Emails.Split(',')
+                                            .Select(e => e.Trim())
+                                            .Where(e => !string.IsNullOrWhiteSpace(e))
+                                            .Distinct(StringComparer.OrdinalIgnoreCase)
+                                            .ToList();
 
                 foreach (string email in emailList)
                 {
@@ -72,7 +77,7 @@ namespace BulkMailSender.Controllers
                     );
 
                     message.To.Add(
-                        MailboxAddress.Parse(email.Trim())
+                        MailboxAddress.Parse(email)
                     );
 
                     message.Subject = model.Subject;
@@ -127,17 +132,13 @@ namespace BulkMailSender.Controllers
                     }
                 }
 
-                ViewBag.Message = "Emails sent successfully!";
-                await Task.Delay(5000);
+                return Json(new { success = true, message = "Emails sent successfully!" });
 
             }
             catch (Exception ex)
             {
-                ViewBag.Message = ex.ToString();
+                return Json(new { success = false, message = ex.Message });
             }
-            model.Templates = _context.EmailTemplates.ToList();
-
-            return View("Index", model);
         }
 
 

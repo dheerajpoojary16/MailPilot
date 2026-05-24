@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BulkMailSender</title>
+    <title>@ViewData["Title"] - MailPilot</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -11,14 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="~/css/custom.css" />
 </head>
 <body class="d-flex flex-column min-vh-100 premium-bg">
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen d-flex flex-column justify-content-center align-items-center">
+        <div class="splash-logo mb-3">
+            <i class="bi bi-send-fill text-primary" style="font-size: 4rem;"></i>
+        </div>
+        <h2 class="brand-text text-center">MailPilot</h2>
+        <div class="spinner-grow text-primary mt-4" style="width: 2rem; height: 2rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom shadow-sm premium-navbar">
             <div class="container-fluid px-4">
-                <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" asp-area="" asp-controller="Home" asp-action="Index">
-                    <i class="bi bi-send-fill fs-4"></i> BulkMailSender
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2 brand-logo" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-send-fill fs-4 text-primary"></i> <span class="brand-text">MailPilot</span>
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,13 +61,27 @@
 
     <footer class="mt-auto py-3 bg-white border-top text-muted text-center text-sm">
         <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
-            <small>&copy; 2026 BulkMailSender</small>
+            <small>&copy; 2026 MailPilot</small>
             <small><a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-muted text-decoration-none hover-primary">Privacy Policy</a></small>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <!-- Splash Screen Script -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const splash = document.getElementById('splashScreen');
+                if(splash) {
+                    splash.classList.add('hidden');
+                    setTimeout(() => splash.style.display = 'none', 500); // Remove from DOM flow after fade
+                }
+            }, 800); // 800ms delay for premium feel
+        });
+    </script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
