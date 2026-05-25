@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "BulkMailSender\\appsettings.json",
               "ToolTip": "C:\\Users\\user\\source\\repos\\BulkMailSender\\BulkMailSender\\appsettings.json",
               "RelativeToolTip": "BulkMailSender\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-24T14:51:33.781Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "RelativeToolTip": "BulkMailSender\\wwwroot\\css\\custom.css",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAAFsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-24T12:53:03.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T12:53:03.852Z"
             },
             {
               "$type": "Document",
@@ -92,7 +91,8 @@
               "RelativeToolTip": "BulkMailSender\\Models\\EmailTemplate.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAIA6wAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T11:08:17.455Z"
+              "WhenOpened": "2026-05-24T11:08:17.455Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -104,7 +104,8 @@
               "RelativeToolTip": "BulkMailSender\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAIcAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-23T07:10:31.598Z"
+              "WhenOpened": "2026-05-23T07:10:31.598Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -116,7 +117,8 @@
               "RelativeToolTip": "BulkMailSender\\ViewModels\\EmailViewModel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T06:59:52.289Z"
+              "WhenOpened": "2026-05-23T06:59:52.289Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,7 +130,8 @@
               "RelativeToolTip": "BulkMailSender\\Controllers\\HomeController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAA3wGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T06:35:01.739Z"
+              "WhenOpened": "2026-05-23T06:35:01.739Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
