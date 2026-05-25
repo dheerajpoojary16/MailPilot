@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using System.Net;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BulkMailSender.Controllers
 {
+    [Authorize]
     public class HomeController : Controller   
     {
         private readonly ApplicationDbContext _context;
@@ -50,6 +52,12 @@ namespace BulkMailSender.Controllers
         [HttpPost]
         public async Task<IActionResult>  Send(EmailViewModel model)
         {
+            if (User.IsInRole("Guest"))
+            {
+                await Task.Delay(1500); // Simulate network latency
+                return Json(new { success = true, isDemo = true, message = "Demo Success! In Guest Mode, email sending is fully simulated. No real emails were sent to prevent abuse." });
+            }
+
             try
             {
                 var emailList = model.Emails.Split(',')

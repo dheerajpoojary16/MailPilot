@@ -7,6 +7,17 @@
             <h2 class="page-title mb-1">MailPilot</h2>
             <p class="text-muted mb-4">Compose and send emails to your audience efficiently.</p>
 
+            @if (User.IsInRole("Guest"))
+            {
+                <div class="alert border-0 shadow-sm d-flex align-items-center mb-4 rounded-4 py-3" style="background: rgba(13, 202, 240, 0.08); backdrop-filter: blur(5px); border-left: 4px solid #0dcaf0 !important;">
+                    <i class="bi bi-lightning-charge-fill me-3 fs-4 text-info"></i>
+                    <div>
+                        <strong class="text-info-emphasis" style="font-size: 0.95rem; color: #0891b2 !important;">Demo Mode Active</strong>
+                        <div class="text-muted small mt-1" style="font-size: 0.8rem;">You are exploring MailPilot as a guest. All email dispatches will be simulated safely with zero actual emails sent.</div>
+                    </div>
+                </div>
+            }
+
             @if (ViewBag.Message != null)
             {
                 <div class="alert alert-success d-flex align-items-center mb-4">
@@ -219,14 +230,23 @@
             btn.disabled = false;
 
             if (data.success) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success!',
-                    text: data.message,
-                    confirmButtonColor: '#2563eb',
-                    timer: 3000,
-                    timerProgressBar: true
-                });
+                if (data.isDemo) {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Demo Mail Simulated!',
+                        text: data.message,
+                        confirmButtonColor: '#2563eb'
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: data.message,
+                        confirmButtonColor: '#2563eb',
+                        timer: 3000,
+                        timerProgressBar: true
+                    });
+                }
             } else {
                 Swal.fire({
                     icon: 'error',

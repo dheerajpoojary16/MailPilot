@@ -1,4 +1,4 @@
-﻿using BulkMailSender.Models;
+using BulkMailSender.Models;
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 

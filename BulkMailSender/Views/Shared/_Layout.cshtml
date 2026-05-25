@@ -37,17 +37,22 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav ms-auto align-items-center gap-3">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Settings</a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <div class="user-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width:36px; height:36px; font-weight:600;">
-                                DP
-                            </div>
-                        </li>
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-medium" asp-area="" asp-controller="Home" asp-action="Index">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger d-flex align-items-center gap-1 fw-medium" asp-area="" asp-controller="Account" asp-action="Logout">
+                                    <i class="bi bi-box-arrow-right"></i> Logout
+                                </a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <div class="user-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width:36px; height:36px; font-weight:600; font-size: 0.85rem;" title="Logged in as @User.Identity.Name">
+                                    @(User.Identity.Name == "Admin" ? "AD" : "GT")
+                                </div>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
