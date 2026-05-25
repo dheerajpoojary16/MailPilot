@@ -18,11 +18,11 @@
         :root {
             --primary-color: #2563eb;
             --primary-hover: #1d4ed8;
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --card-border: rgba(255, 255, 255, 0.08);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --card-border: rgba(255, 255, 255, 0.7);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
         }
 
         body {
@@ -34,101 +34,163 @@
             align-items: center;
             justify-content: center;
             margin: 0;
-            overflow-x: hidden;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glow Blobs */
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: 1;
+            animation: drift 20s infinite alternate ease-in-out;
+        }
+        .blob-1 {
+            background: #2563eb;
+            top: -150px;
+            left: -150px;
+        }
+        .blob-2 {
+            background: #a855f7;
+            bottom: -150px;
+            right: -150px;
+            animation-delay: -7s;
         }
 
         .login-container {
             width: 100%;
-            max-width: 460px;
+            max-width: 450px;
             padding: 20px;
+            position: relative;
+            z-index: 10;
         }
 
+        /* Upgraded Glassmorphism Card */
         .login-card {
-            background: rgba(15, 23, 42, 0.45);
+            background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 28px;
+            padding: 45px 40px;
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.01),
+                0 20px 40px -10px rgba(37, 99, 235, 0.06),
+                0 40px 80px -15px rgba(0, 0, 0, 0.04),
+                inset 0 1px 1px rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            animation: slideUp 0.6s ease-out;
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .brand-logo-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .brand-icon {
-            font-size: 3.5rem;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+            font-size: 3.8rem;
+            background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 4px 12px rgba(139, 92, 246, 0.3));
-            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 16px rgba(37, 99, 235, 0.15));
+            animation: float 5s ease-in-out infinite;
         }
 
         .brand-title {
             font-size: 2.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #6366f1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.04em;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .brand-subtitle {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 400;
+            margin-top: 2px;
         }
 
         .form-label {
             font-weight: 600;
             font-size: 0.85rem;
-            color: #cbd5e1;
-            margin-bottom: 6px;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            display: block;
         }
 
-        .premium-input {
-            background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            color: #ffffff !important;
-            border-radius: 12px !important;
-            padding: 12px 16px !important;
+        /* Seamless Input Group */
+        .premium-input-group {
+            border-radius: 14px;
+            border: 1px solid #cbd5e1;
+            background: #ffffff;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .premium-input-group:focus-within {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+        }
+
+        .premium-input-group .input-group-text {
+            border: none !important;
+            background: transparent !important;
+            padding-left: 16px;
+            padding-right: 4px;
+            color: #94a3b8 !important;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+
+        .premium-input-group:focus-within .input-group-text {
+            color: var(--primary-color) !important;
+        }
+
+        .premium-input-group .premium-input {
+            border: none !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 14px 16px 14px 8px !important;
             font-size: 0.95rem !important;
-            transition: all 0.2s ease !important;
-        }
-
-        .premium-input:focus {
-            background: rgba(255, 255, 255, 0.08) !important;
-            border-color: #6366f1 !important;
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25) !important;
-            outline: none !important;
+            color: var(--text-main) !important;
+            flex-grow: 1;
         }
 
         .premium-input::placeholder {
-            color: rgba(255, 255, 255, 0.3);
+            color: #94a3b8;
         }
 
+        /* Interactive Buttons */
         .btn-admin-login {
-            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
             border: none;
-            border-radius: 12px;
-            padding: 12px 24px;
+            border-radius: 14px;
+            padding: 14px 24px;
             color: white;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            font-size: 0.98rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
         }
 
         .btn-admin-login:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-            background: linear-gradient(135deg, #1d4ed8, #4338ca);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-admin-login:active {
+            transform: translateY(0);
         }
 
         .divider {
@@ -136,86 +198,100 @@
             align-items: center;
             text-align: center;
             color: var(--text-muted);
-            margin: 25px 0;
-            font-size: 0.8rem;
+            margin: 30px 0;
+            font-size: 0.78rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
+            font-weight: 500;
         }
 
         .divider::before, .divider::after {
             content: '';
             flex: 1;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         }
 
         .divider:not(:empty)::before {
-            margin-right: .5em;
+            margin-right: 1em;
         }
 
         .divider:not(:empty)::after {
-            margin-left: .5em;
+            margin-left: 1em;
         }
 
         .btn-guest-explore {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px dashed rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            padding: 14px 24px;
-            color: #ffffff;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px dashed rgba(37, 99, 235, 0.3);
+            border-radius: 14px;
+            padding: 15px 24px;
+            color: var(--primary-color);
             font-weight: 600;
-            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01);
         }
 
         .btn-guest-explore:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(37, 99, 235, 0.04);
+            border-color: var(--primary-color);
+            border-style: solid;
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.05);
+        }
+
+        .btn-guest-explore:active {
+            transform: translateY(0);
         }
 
         .alert-premium {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            border-radius: 12px;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border-radius: 14px;
             font-size: 0.85rem;
-            padding: 12px;
-            margin-bottom: 20px;
+            padding: 14px;
+            margin-bottom: 25px;
         }
 
         .features-grid {
             display: flex;
             justify-content: space-around;
-            margin-top: 30px;
-            font-size: 0.75rem;
+            margin-top: 35px;
+            font-size: 0.78rem;
             color: var(--text-muted);
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 25px;
         }
 
         .feature-item i {
-            font-size: 1.1rem;
-            color: #8b5cf6;
-            margin-bottom: 4px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 6px;
             display: block;
         }
 
         @@keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @@keyframes drift {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(40px, 20px) scale(1.08); }
+            100% { transform: translate(-20px, -40px) scale(0.92); }
         }
 
         @@keyframes slideUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -225,6 +301,10 @@
     </style>
 </head>
 <body>
+    <!-- Decorative Glowing Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <div class="login-container">
         <div class="login-card">
             
@@ -237,31 +317,37 @@
             @if (!ViewData.ModelState.IsValid)
             {
                 <div class="alert alert-premium d-flex align-items-center gap-2">
-                    <i class="bi bi-exclamation-triangle-fill"></i>
-                    <div asp-validation-summary="ModelOnly"></div>
+                    <i class="bi bi-exclamation-triangle-fill text-danger fs-5"></i>
+                    <div asp-validation-summary="ModelOnly" class="text-danger fw-medium"></div>
                 </div>
             }
 
             <form asp-controller="Account" asp-action="Login" method="post">
                 <div class="mb-3">
-                    <label class="form-label">Admin Email</label>
-                    <input asp-for="Email" class="form-control premium-input" placeholder="admin@mailpilot.com" />
+                    <label class="form-label">Email</label>
+                    <div class="premium-input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input asp-for="Email" class="premium-input" placeholder="admin@mailpilot.com" />
+                    </div>
                     <span asp-validation-for="Email" class="text-danger small mt-1 d-block"></span>
                 </div>
 
                 <div class="mb-4">
                     <label class="form-label">Password</label>
-                    <input asp-for="Password" type="password" class="form-control premium-input" placeholder="••••••••" />
+                    <div class="premium-input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input asp-for="Password" type="password" class="premium-input" placeholder="••••••••" />
+                    </div>
                     <span asp-validation-for="Password" class="text-danger small mt-1 d-block"></span>
                 </div>
 
-                <button type="submit" name="submitType" value="admin" class="btn btn-admin-login w-100 py-3 d-flex align-items-center justify-content-center gap-2">
-                    <i class="bi bi-shield-lock-fill"></i> Login as Admin
+                <button type="submit" name="submitType" value="admin" class="btn btn-admin-login w-100 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-shield-lock-fill"></i> Login
                 </button>
                 
                 <div class="divider">Or explore safely</div>
 
-                <button type="submit" name="submitType" value="guest" class="btn btn-guest-explore py-3">
+                <button type="submit" name="submitType" value="guest" class="btn btn-guest-explore">
                     <i class="bi bi-lightning-charge-fill text-warning"></i> Explore as Guest (1-Click Demo)
                 </button>
             </form>
